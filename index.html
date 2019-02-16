@@ -47,15 +47,18 @@ var parameter = [
 'como%20hacer%20ejemplo%20cuatro'
 ];
 
-var parameter_gle = '?utm_source=Google&utm_medium=organic&utm_term=';
+	
+	var parameter_gle = '?utm_source=Google&utm_medium=organic&utm_term=';
+	
+function url_a_iframear(){
+	return $.rand(items)+parameter_gle+$.rand(parameter);
+}
 
-var lets_go = $.rand(items)+parameter_gle+$.rand(parameter);
-
-//alert(lets_go);
-$("#ifr1").attr("src", lets_go);
-$("#ifr2").attr("src", lets_go);
-$("#ifr3").attr("src", lets_go);
-$("#ifr4").attr("src", lets_go);
+//alert(url_a_iframear());
+$("#ifr1").attr("src", url_a_iframear());
+$("#ifr2").attr("src", url_a_iframear());
+$("#ifr3").attr("src", url_a_iframear());
+$("#ifr4").attr("src", url_a_iframear());
 </script>
 
 
