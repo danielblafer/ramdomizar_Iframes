@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ramdom ifr</title>
+	<!--relleno-->
+	<style type="text/css">
+		 iframe{width: 49%;float: left;height: 200px;}
+
+	</style>
+</head>
+<body>
+<h2>Recordatorio a mi yo del futuro de como hacer iframes ramdomizados</h2>
+
+<iframe id="ifr1" frameborder="0" scrolling="yes">
+<iframe id="ifr2" frameborder="0" scrolling="yes">
+<iframe id="ifr3" frameborder="0" scrolling="yes">
+<iframe id="ifr4" frameborder="0" scrolling="yes">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+<script type="text/javascript">
+	(function($) {
+    $.rand = function(arg) {
+        if ($.isArray(arg)) {
+            return arg[$.rand(arg.length)];
+        } else if (typeof arg == "number") {
+            return Math.floor(Math.random() * arg);
+        } else {
+            return 4;
+        }
+    };
+})(jQuery);
+
+var items = [
+'https://medium.com/',
+'https://es.quora.com/',
+'https://www.huffingtonpost.es/',
+'https://elpais.com/',
+'https://as.com/'
+];
+
+var parameter = [
+'como%20hacer%20ejemplo%20uno',
+'como%20hacer%20ejemplo%20dos',
+'como%20hacer%20ejemplo%20tres',
+'como%20hacer%20ejemplo%20cuatro'
+];
+
+var parameter_gle = '?utm_source=Google&utm_medium=organic&utm_term=';
+
+var lets_go = $.rand(items)+parameter_gle+$.rand(parameter);
+
+//alert(lets_go);
+$("#ifr1").attr("src", lets_go);
+$("#ifr2").attr("src", lets_go);
+$("#ifr3").attr("src", lets_go);
+$("#ifr4").attr("src", lets_go);
+</script>
+
+
+</body>
+</html>
